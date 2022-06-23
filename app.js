@@ -11,11 +11,12 @@ app.use(express.static(path.join(__dirname, './public')));
 let userCount = 0;
 
 
+
 app.get('/', (req, res) => {
     res.render('index', {
         title: "Portfolio | Prosenjit",
         name: "PROSENJIT BARMAN",
-        visitor: userCount++
+        visitor: userCount++,
     });
 })
 
