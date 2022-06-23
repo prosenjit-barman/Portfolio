@@ -24,14 +24,26 @@ html(lang="en")
                         h3 0
                         h4 Projects
                     li
-                        h3 0
+                        h3.followers 0
                         h4 Followers
                 .links
                     button.view
-                        a(href="https://github.com/prosenjit-barman/")  View #{name} profile
+                        a(href="https://github.com/prosenjit-barman/")  View profile
+
+                    button(type='button' onclick='if(!event.detail || event.detail == 1){followerIncrease()}') Follow
 
         .footer 
             span.footer--container 
                 p.footer_text 
                     Profile Views are Real. Try Refreshing Browser!😉
+    
+    script.
+        let targetFollower = document.getElementsByClassName("followers")[0];
+        let followerCount = 0;
+        function followerIncrease() {
+            followerCount++;
+            targetFollower.innerHTML  = followerCount.toString();
+            //console.log(followerCount);
 
+            return followerCount;
+        }
