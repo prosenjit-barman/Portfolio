@@ -15,7 +15,7 @@ let userCount = 0;
 app.get('/', (req, res) => {
     res.render('index', {
         title: "Portfolio | Prosenjit",
-        name: "PROSENJIT BARMAN",
+        name: "PROSENJIT BARMAN PROSEN",
         visitor: userCount++,
     });
 })
